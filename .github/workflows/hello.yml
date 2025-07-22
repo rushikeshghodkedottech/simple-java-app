@@ -1,0 +1,18 @@
+name: Hello Workflow
+on:
+  push: 
+    branches: [main]
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: Check Step
+        uses: actions/checkout@v4
+        
+      - name: Hello Step
+        run: echo "Hello"
+
+      - name: Show date
+        run: date
