@@ -1,0 +1,19 @@
+name: Compile and Run Java App
+
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  check-code:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Compile Java
+        run: javac src/Main.java
+
+      - name: Run Java
+        run: java src/Main.java
